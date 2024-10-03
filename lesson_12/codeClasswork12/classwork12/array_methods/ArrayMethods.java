@@ -6,6 +6,38 @@ package classwork12.array_methods;
 
 public class ArrayMethods {
 
+    // O(log(n))
+    // binary search
+    public static int binarySearch(int[] array, int n){
+        int leftIndex = 0;
+        int rightIndex = array.length -1;
+
+        while (leftIndex <= rightIndex){
+            int midIndex = (leftIndex + rightIndex) / 2;
+            if(array[midIndex] == n){
+                return midIndex;
+            } else if (n < array[midIndex]) {
+                rightIndex = midIndex - 1; // правую половину надо отбросить
+            } else {
+                leftIndex = midIndex + 1; // левую половину надо отбросить
+            }
+        }
+        return -leftIndex - 1; // если элемент не нашёлся
+    }
+
+    // O(n) - чем больше элементов массива, тем дольше работает метод
+    // linear search, return index (if element absent return -1 )
+    public static int linearSearch(int[] array, int n){
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] == n){
+                return i; // go out from method
+            }
+        }
+        return -1;
+    }
+
+
+
     //fill array random numbers
     //a - left border, b -right border, n -quantity numbers
     public static int[] fillArray(int a, int b, int n) {
