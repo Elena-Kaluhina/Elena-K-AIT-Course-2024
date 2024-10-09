@@ -2,15 +2,6 @@ package array_Methods;
 
 public class ArrayMethods {
 
-    //sum elements
-
-
-
-    // average
-
-
-
-
     // add percent
     public static double[] calculatePercent(double[] array, double percent){
         for (int i = 0; i < array.length; i++) {
