@@ -1,7 +1,6 @@
-package classwork29.carGarage.ait.cars.dao;
+package homework29.carGarageClasswork29.carGarage.ait.cars.dao;
 
-import classwork29.carGarage.ait.cars.model.Car;//**Смысл приложения:**
-//имеется компания, которая содержит "большой" гараж и привлекает другие компании ставить машины в ее гараж.
+import homework29.carGarageClasswork29.carGarage.ait.cars.model.Car;//имеется компания, которая содержит "большой" гараж и привлекает другие компании ставить машины в ее гараж.
 //Флотом автомобилей, который использует гараж, необходимо управлять:
 //- знать сколько машин стоит в гараже
 //- добавлять машины в гараж +

@@ -1,6 +1,6 @@
-package classwork29.carGarage.ait.cars.dao;
+package homework29.carGarageClasswork29.carGarage.ait.cars.dao;
 
-import classwork29.carGarage.ait.cars.model.Car;
+import homework29.carGarageClasswork29.carGarage.ait.cars.model.Car;
 
 import java.util.function.Predicate;
 

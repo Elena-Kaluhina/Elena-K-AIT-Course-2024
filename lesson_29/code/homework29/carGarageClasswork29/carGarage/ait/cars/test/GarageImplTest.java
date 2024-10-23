@@ -1,8 +1,8 @@
-package classwork29.carGarage.ait.cars.test;
+package homework29.carGarageClasswork29.carGarage.ait.cars.test;
 
-import classwork29.carGarage.ait.cars.dao.Garage;
-import classwork29.carGarage.ait.cars.dao.GarageImpl;
-import classwork29.carGarage.ait.cars.model.Car;
+import homework29.carGarageClasswork29.carGarage.ait.cars.dao.Garage;
+import homework29.carGarageClasswork29.carGarage.ait.cars.dao.GarageImpl;
+import homework29.carGarageClasswork29.carGarage.ait.cars.model.Car;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
