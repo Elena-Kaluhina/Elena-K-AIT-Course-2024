@@ -1,10 +1,7 @@
-package classwork28.ait.employee.dao;
+package homework28.ait.employee.dao;
 
-import classwork28.ait.employee.model.Employee;
-import classwork28.ait.employee.model.SalesManager;
-
-import java.util.ArrayList;
-import java.util.List;
+import homework28.ait.employee.model.Employee;
+import homework28.ait.employee.model.SalesManager;
 
 public class CompanyImpl implements Company {
 
