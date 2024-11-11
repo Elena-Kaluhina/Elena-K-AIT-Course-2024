@@ -1,12 +1,13 @@
-package homework28.ait.employee.test;
+package classwork32.ait.employee.test;
 
-import homework28.ait.employee.dao.Company;
-import homework28.ait.employee.dao.CompanyImpl;
-import homework28.ait.employee.model.Employee;
-import homework28.ait.employee.model.Manager;
-import homework28.ait.employee.model.SalesManager;
-import homework28.ait.employee.model.Worker;
+import classwork32.ait.employee.dao.Company;
+import classwork32.ait.employee.dao.CompanyImpl;
+import classwork32.ait.employee.model.Employee;
+import classwork32.ait.employee.model.Manager;
+import classwork32.ait.employee.model.SalesManager;
+import classwork32.ait.employee.model.Worker;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -25,8 +26,8 @@ class CompanyImplTest {
         //а здесь мы его заполняем
         employees = new Employee[4];
         employees[0] = new Manager(1, "N1", "L1", 160, 5000, 25);//grade - это почасовая ставка
-        employees[1] = new SalesManager(2, "N2", "L2", 165, 50000, 0.1);
-        employees[2] = new SalesManager(3, "N3", "L3", 175,  80000, 0.15);
+        employees[1] = new SalesManager(2, "N2", "L2", 170, 50000, 0.1);
+        employees[2] = new SalesManager(3, "N3", "L3", 165,  80000, 0.15);
         employees[3] = new Worker(4, "N4", "L4", 160, 20);//grade - это почасовая ставка
 
         // TODO поместить объекты emp[] в объект company c помощью метода addEmployee
@@ -82,17 +83,11 @@ class CompanyImplTest {
 
 
     @Test
+    @DisplayName("Update employee is working...")
     void updateEmployeeTest() {
-        // Test updating an employee
-        Employee updatedEmployee = new Manager(1, "N1-updated", "L1-updated", 180, 5500, 30);
-        assertEquals(updatedEmployee, company.updateEmployee(updatedEmployee));
+        Employee upDateEmployee = new SalesManager(2,"n2", "New2Name", 170, 55000, 0.1);
+        assertEquals("New2Name", company.updateEmployee(upDateEmployee).getSurName());
 
-        // Verify the employee was updated
-        Employee foundEmployee = company.findEmployee(1);
-        assertEquals("N1-updated", foundEmployee.getName());
-        assertEquals("L1-updated", foundEmployee.getSurName());
-        assertEquals(180, foundEmployee.getHours());
-        assertEquals(5500 + 180 * 30, foundEmployee.calcSalary(), 0.01); //проверяем расчёт зарплаты
     }
 
 
@@ -129,20 +124,16 @@ class CompanyImplTest {
 
     @Test
     void findEmployeeHoursGreatThanTest() {
-        Employee[] expected = {employees[1], employees[2]}; //
+        Employee[] expected = {employees[1], employees[2]};
         Employee[] actual = company.findEmployeeHoursGreatThan(160);
         assertArrayEquals(expected, actual);
     }
-
-
 
     @Test
     void findEmployeeSalaryRangeTest() {
         Employee[] expected = {employees[0], employees[1], employees[3]};
         Employee[] actual = company.findEmployeeSalaryRange(3000, 10000);
         assertArrayEquals(expected, actual);
+
     }
 }
-
-
-

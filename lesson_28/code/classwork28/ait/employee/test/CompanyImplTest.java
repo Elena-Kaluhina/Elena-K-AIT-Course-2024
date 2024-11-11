@@ -25,8 +25,8 @@ class CompanyImplTest {
         //а здесь мы его заполняем
         employees = new Employee[4];
         employees[0] = new Manager(1, "N1", "L1", 160, 5000, 25);//grade - это почасовая ставка
-        employees[1] = new SalesManager(2, "N2", "L2", 160, 50000, 0.1);
-        employees[2] = new SalesManager(3, "N3", "L3", 160,  80000, 0.15);
+        employees[1] = new SalesManager(2, "N2", "L2", 165, 50000, 0.1);
+        employees[2] = new SalesManager(3, "N3", "L3", 175,  80000, 0.15);
         employees[3] = new Worker(4, "N4", "L4", 160, 20);//grade - это почасовая ставка
 
         // TODO поместить объекты emp[] в объект company c помощью метода addEmployee
